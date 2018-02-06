@@ -58,7 +58,7 @@ class PicSpider(object):
             logging.info(href)
             # print('来源：%s' % base_url)
             # print('img地址：%s' % href)
-            con = pymysql.connect(host='127.0.0.1', port=3306, user='root', password='mysql', database='netall', charset='utf8mb4')
+            con = pymysql.connect(host='', port=, user='', password='', database='', charset='')
             # 操作游标
             cue = con.cursor()
             print("mysql connect succes")
@@ -114,9 +114,8 @@ class PicSpider(object):
         self.redis_tool.sadd_value('climbed_url_%s' % self.tool.convert_url2key(self.base_url), url)
 
 # 列表a中放所有网址和域名
-a = [['http://www.58pic.com/', '58pic']]
+a = [['', '']]
 
-# a = [['https://aiji66.com/', 'aiji66']]
 
 spawn_list = []
 for i, j in a:
